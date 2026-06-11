@@ -15,69 +15,55 @@
   --font:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 }
 body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100vh;overflow:hidden;display:flex}
-/* ─── SIDEBAR ─── */
 #sb{width:var(--sw);height:100vh;background:var(--s1);border-right:1px solid var(--bd);display:flex;flex-direction:column;flex-shrink:0}
 .sbl{padding:18px 18px 14px;border-bottom:1px solid var(--bd)}
 .sbl h1{font-size:17px;font-weight:700;background:linear-gradient(135deg,var(--ac),#c4b5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sbl p{font-size:11px;color:var(--t3);margin-top:2px}
 .sbn{flex:1;padding:10px 8px}
 .ni{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:var(--rsm);cursor:pointer;color:var(--t2);font-size:13px;font-weight:500;transition:all .15s;margin-bottom:2px;user-select:none;border:none;background:none;width:100%;text-align:left}
-.ni:hover{background:var(--s2);color:var(--t1)}
-.ni.on{background:var(--ac2);color:var(--ac)}
+.ni:hover{background:var(--s2);color:var(--t1)}.ni.on{background:var(--ac2);color:var(--ac)}
 .ni svg{flex-shrink:0;width:15px;height:15px}
 .sbb{padding:10px 8px;border-top:1px solid var(--bd)}
-/* ─── MAIN ─── */
 #main{flex:1;height:100vh;overflow:hidden;display:flex;flex-direction:column}
 .mh{padding:18px 26px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;background:var(--s1);flex-shrink:0}
 .mh h2{font-size:19px;font-weight:600}
 .mc{flex:1;overflow-y:auto;padding:22px 26px}
-/* ─── BUTTONS ─── */
 .btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--rsm);border:none;cursor:pointer;font-size:13px;font-weight:500;font-family:var(--font);transition:all .15s}
 .btn-p{background:var(--ac);color:#fff}.btn-p:hover{background:var(--ac3)}
 .btn-s{background:var(--s2);color:var(--t1);border:1px solid var(--bd)}.btn-s:hover{background:var(--s3)}
 .btn-g{background:transparent;color:var(--t2)}.btn-g:hover{color:var(--t1);background:var(--s2)}
 .btn-d{background:rgba(239,68,68,.12);color:var(--er);border:1px solid rgba(239,68,68,.25)}.btn-d:hover{background:rgba(239,68,68,.22)}
 .btn-sm{padding:4px 9px;font-size:12px}
-/* ─── BADGES ─── */
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
 .bq{background:rgba(245,158,11,.13);color:var(--sq);border:1px solid rgba(245,158,11,.28)}
 .bp{background:rgba(59,130,246,.13);color:var(--sp);border:1px solid rgba(59,130,246,.28)}
 .bf{background:rgba(168,85,247,.13);color:var(--sf);border:1px solid rgba(168,85,247,.28)}
 .bi{background:rgba(20,184,166,.13);color:var(--si);border:1px solid rgba(20,184,166,.28)}
 .bd2{background:rgba(34,197,94,.13);color:var(--sd);border:1px solid rgba(34,197,94,.28)}
-.ov{background:rgba(239,68,68,.13);color:var(--er);border:1px solid rgba(239,68,68,.28)}
-/* ─── STATS ─── */
 .sg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
 .sc{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px}
 .sl{font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px}
-.sv{font-size:24px;font-weight:700}
-.ss{font-size:11px;color:var(--t2);margin-top:3px}
-/* ─── JOB CARDS ─── */
+.sv{font-size:24px;font-weight:700}.ss{font-size:11px;color:var(--t2);margin-top:3px}
 .jl{display:flex;flex-direction:column;gap:9px}
 .jc{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:14px 18px;cursor:pointer;transition:all .15s;display:grid;grid-template-columns:1fr auto auto auto auto;align-items:center;gap:14px}
 .jc:hover{border-color:var(--ac);background:var(--s2);transform:translateY(-1px)}
 .jc.ov2{border-left:3px solid var(--er)}
-.jt{font-size:14px;font-weight:600;margin-bottom:2px}
-.jcl{font-size:12px;color:var(--t2)}
+.jt{font-size:14px;font-weight:600;margin-bottom:2px}.jcl{font-size:12px;color:var(--t2)}
 .jm{font-size:12px;color:var(--t2);text-align:right;white-space:nowrap}
-/* ─── TIMER ─── */
 .td{font-family:'Courier New',monospace;font-size:13px;font-weight:700;color:var(--ac)}
 .td.run{animation:pulse 1.5s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .tbtn{display:flex;align-items:center;gap:8px;padding:9px 18px;border-radius:var(--rsm);border:none;cursor:pointer;font-size:14px;font-weight:600;font-family:var(--font);transition:all .15s}
 .ts{background:rgba(34,197,94,.12);color:var(--sd);border:1px solid rgba(34,197,94,.28)}.ts:hover{background:rgba(34,197,94,.22)}
 .te{background:rgba(239,68,68,.12);color:var(--er);border:1px solid rgba(239,68,68,.28)}.te:hover{background:rgba(239,68,68,.22)}
-/* ─── DETAIL PANEL ─── */
 #dv{position:fixed;top:0;right:0;width:calc(100vw - var(--sw));height:100vh;background:var(--bg);transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);z-index:100;display:flex;flex-direction:column;overflow:hidden}
 #dv.open{transform:translateX(0)}
 .dh{padding:18px 26px;background:var(--s1);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:14px;flex-shrink:0}
 .dh h2{font-size:17px;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* ─── TABS ─── */
 .tabs{display:flex;border-bottom:1px solid var(--bd);padding:0 26px;background:var(--s1);flex-shrink:0}
 .tab{padding:13px 14px;font-size:13px;font-weight:500;color:var(--t2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;white-space:nowrap}
 .tab:hover{color:var(--t1)}.tab.on{color:var(--ac);border-bottom-color:var(--ac)}
 .tc{padding:22px 26px;overflow-y:auto;flex:1}
-/* ─── FORMS ─── */
 .fg{margin-bottom:14px}
 label{display:block;font-size:11px;font-weight:500;color:var(--t2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.4px}
 input,textarea,select{width:100%;background:var(--s2);border:1px solid var(--bd);border-radius:var(--rsm);padding:8px 11px;color:var(--t1);font-family:var(--font);font-size:13px;outline:none;transition:border-color .15s}
@@ -85,16 +71,12 @@ input:focus,textarea:focus,select:focus{border-color:var(--ac)}
 textarea{resize:vertical;min-height:90px}
 select option{background:var(--s2)}
 .fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.fr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
-/* ─── MODALS ─── */
 .mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(5px)}
 .mo.open{display:flex}
 .md{background:var(--s1);border:1px solid var(--bd);border-radius:14px;width:90%;max-width:660px;max-height:90vh;overflow-y:auto}
 .mdh{padding:18px 22px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
 .mdh h3{font-size:15px;font-weight:600}
-.mdb{padding:22px}
-.mdf{padding:14px 22px;border-top:1px solid var(--bd);display:flex;justify-content:flex-end;gap:9px}
-/* ─── MISC ─── */
+.mdb{padding:22px}.mdf{padding:14px 22px;border-top:1px solid var(--bd);display:flex;justify-content:flex-end;gap:9px}
 .card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:18px}
 .ig{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
 .ii{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rsm);padding:11px 13px}
@@ -106,14 +88,12 @@ select option{background:var(--s2)}
 .al-i{background:var(--ac2);border:1px solid rgba(124,109,250,.28);color:var(--ac)}
 .al-w{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.28);color:var(--sq)}
 .es{text-align:center;padding:50px 20px;color:var(--t2)}
-.es h3{font-size:17px;margin-bottom:8px;color:var(--t1)}
-.es p{font-size:13px;margin-bottom:18px}
+.es h3{font-size:17px;margin-bottom:8px;color:var(--t1)}.es p{font-size:13px;margin-bottom:18px}
 .spin{display:inline-block;width:16px;height:16px;border:2px solid var(--bd);border-top-color:var(--ac);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .fc{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;align-items:center}
 .chip{padding:4px 13px;border-radius:20px;border:1px solid var(--bd);background:var(--s2);color:var(--t2);font-size:12px;font-weight:500;cursor:pointer;transition:all .15s}
 .chip:hover{color:var(--t1)}.chip.on{background:var(--ac2);border-color:var(--ac);color:var(--ac)}
-/* Timeline */
 .tl{display:flex;align-items:center;margin:14px 0}
 .tls{flex:1;text-align:center;position:relative;cursor:pointer}
 .tls:not(:last-child)::after{content:'';position:absolute;top:12px;right:-50%;width:100%;height:2px;background:var(--bd);z-index:0}
@@ -124,34 +104,20 @@ select option{background:var(--s2)}
 .tll{font-size:10px;color:var(--t2)}.tls.act .tll{color:var(--ac);font-weight:600}
 .pb{height:4px;background:var(--bd);border-radius:2px;overflow:hidden;margin-top:8px}
 .pf{height:100%;background:linear-gradient(90deg,var(--ac),#c4b5fd);border-radius:2px;transition:width .3s}
-/* Email thread */
 .em{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
 .emh{padding:11px 14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
-.emh:hover{background:var(--s3)}
-.ems{font-size:13px;font-weight:600}
-.emm{font-size:11px;color:var(--t2);margin-top:2px}
-.emb{padding:14px;font-size:12px;line-height:1.7;white-space:pre-wrap;color:var(--t2);display:none;border-top:1px solid var(--bd)}
-.emb.exp{display:block}
-/* Links */
+.emh:hover{background:var(--s3)}.ems{font-size:13px;font-weight:600}.emm{font-size:11px;color:var(--t2);margin-top:2px}
+.emb{padding:14px;font-size:12px;line-height:1.7;white-space:pre-wrap;color:var(--t2);display:none;border-top:1px solid var(--bd)}.emb.exp{display:block}
 .li{display:flex;align-items:center;gap:11px;padding:11px 14px;background:var(--s2);border:1px solid var(--bd);border-radius:var(--rsm);margin-bottom:7px}
-.lii{flex:1;min-width:0}
-.lt{font-size:13px;font-weight:500}
-.lu{font-size:11px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* Deliverables */
+.lii{flex:1;min-width:0}.lt{font-size:13px;font-weight:500}.lu{font-size:11px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .di{background:var(--s2);border:1px solid var(--bd);border-radius:var(--rsm);padding:11px 14px;margin-bottom:7px;display:flex;align-items:center;gap:11px}
 .df{background:var(--ac2);color:var(--ac);border-radius:var(--rsm);padding:3px 9px;font-size:11px;font-weight:600;white-space:nowrap}
-/* GST */
-.gc{background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);border-radius:var(--rsm);padding:11px 13px;margin-top:7px;font-size:13px}
-.gr{display:flex;justify-content:space-between;margin-bottom:3px;color:var(--t2)}
-.gr.tot{font-weight:700;color:var(--t1);margin-top:7px;padding-top:7px;border-top:1px solid rgba(34,197,94,.2)}
-/* Scrollbar */
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}
-@media(max-width:768px){:root{--sw:58px}.ni span,.sbl p{display:none}.sg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr 1fr}.fr,.fr3{grid-template-columns:1fr}#dv{width:100%;left:0}}
+@media(max-width:768px){:root{--sw:58px}.ni span,.sbl p{display:none}.sg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr 1fr}.fr{grid-template-columns:1fr}#dv{width:100%;left:0}}
 </style>
 </head>
 <body>
 
-<!-- SIDEBAR -->
 <nav id="sb">
   <div class="sbl"><h1>FrameFlow</h1><p>Freelance Manager</p></div>
   <div class="sbn">
@@ -176,16 +142,11 @@ select option{background:var(--s2)}
   </div>
 </nav>
 
-<!-- MAIN -->
 <div id="main">
-  <div class="mh">
-    <h2 id="pt">Dashboard</h2>
-    <div id="ha"></div>
-  </div>
+  <div class="mh"><h2 id="pt">Dashboard</h2><div id="ha"></div></div>
   <div class="mc" id="mc"></div>
 </div>
 
-<!-- DETAIL PANEL -->
 <div id="dv">
   <div class="dh">
     <button class="btn btn-g btn-sm" onclick="closeDv()">
@@ -199,15 +160,14 @@ select option{background:var(--s2)}
   <div class="tc" id="d-tc"></div>
 </div>
 
-<!-- NEW JOB MODAL -->
+<!-- NEW JOB -->
 <div class="mo" id="m-new">
   <div class="md">
     <div class="mdh"><h3>🎬 New Job</h3><button class="btn btn-g btn-sm" onclick="closeModal('m-new')">✕</button></div>
     <div class="mdb">
       <div class="alert al-i">Paste a client email and AI will extract all the details — or skip to fill in manually.</div>
       <div class="fg"><label>Paste Client Email (Optional)</label>
-        <textarea id="ep" placeholder="Paste full email here..." style="min-height:180px;font-size:12px;"></textarea>
-      </div>
+        <textarea id="ep" placeholder="Paste full email here..." style="min-height:180px;font-size:12px;"></textarea></div>
       <div id="pe" style="display:none;color:var(--er);font-size:12px;margin-bottom:10px;"></div>
     </div>
     <div class="mdf">
@@ -218,7 +178,7 @@ select option{background:var(--s2)}
   </div>
 </div>
 
-<!-- EDIT JOB MODAL -->
+<!-- EDIT JOB -->
 <div class="mo" id="m-edit">
   <div class="md" style="max-width:720px">
     <div class="mdh"><h3>Edit Job</h3><button class="btn btn-g btn-sm" onclick="closeModal('m-edit')">✕</button></div>
@@ -230,35 +190,26 @@ select option{background:var(--s2)}
   </div>
 </div>
 
-<!-- ADD DELIVERABLE MODAL -->
+<!-- ADD DELIVERABLE -->
 <div class="mo" id="m-del">
   <div class="md" style="max-width:480px">
     <div class="mdh"><h3>Add Deliverable</h3><button class="btn btn-g btn-sm" onclick="closeModal('m-del')">✕</button></div>
     <div class="mdb">
       <div class="fr">
         <div class="fg"><label>Format</label>
-          <select id="d-fmt">
-            <option>Landscape 16:9</option><option>Portrait 9:16</option><option>Square 1:1</option>
-            <option>4:3</option><option>2.35:1 Cinematic</option><option>Custom</option>
-          </select>
-        </div>
+          <select id="d-fmt"><option>Landscape 16:9</option><option>Portrait 9:16</option><option>Square 1:1</option>
+            <option>4:3</option><option>2.35:1 Cinematic</option><option>Custom</option></select></div>
         <div class="fg"><label>Resolution</label>
-          <select id="d-res">
-            <option>1920×1080</option><option>1080×1920</option><option>1080×1080</option>
-            <option>3840×2160 (4K)</option><option>2560×1440</option><option>720×1280</option><option>Custom</option>
-          </select>
-        </div>
+          <select id="d-res"><option>1920×1080</option><option>1080×1920</option><option>1080×1080</option>
+            <option>3840×2160 (4K)</option><option>2560×1440</option><option>720×1280</option><option>Custom</option></select></div>
       </div>
       <div class="fr">
         <div class="fg"><label>Duration</label><input type="text" id="d-dur" placeholder="e.g. 30s, 1:00, 90s"></div>
         <div class="fg"><label>Quantity</label><input type="number" id="d-qty" value="1" min="1"></div>
       </div>
       <div class="fg"><label>File Format</label>
-        <select id="d-ft">
-          <option>MP4 H.264</option><option>MP4 H.265</option><option>MOV ProRes 422</option>
-          <option>MOV ProRes 4444</option><option>GIF</option><option>WebM</option><option>PNG Sequence</option><option>Custom</option>
-        </select>
-      </div>
+        <select id="d-ft"><option>MP4 H.264</option><option>MP4 H.265</option><option>MOV ProRes 422</option>
+          <option>MOV ProRes 4444</option><option>GIF</option><option>WebM</option><option>PNG Sequence</option><option>Custom</option></select></div>
       <div class="fg"><label>Notes</label><input type="text" id="d-nt" placeholder="Additional specs..."></div>
     </div>
     <div class="mdf">
@@ -268,7 +219,7 @@ select option{background:var(--s2)}
   </div>
 </div>
 
-<!-- ADD LINK MODAL -->
+<!-- ADD LINK -->
 <div class="mo" id="m-lnk">
   <div class="md" style="max-width:440px">
     <div class="mdh"><h3>Add File / Asset Link</h3><button class="btn btn-g btn-sm" onclick="closeModal('m-lnk')">✕</button></div>
@@ -276,12 +227,9 @@ select option{background:var(--s2)}
       <div class="fg"><label>Title</label><input type="text" id="l-ttl" placeholder="e.g. Brand Assets, Draft v1, Final Delivery"></div>
       <div class="fg"><label>URL</label><input type="url" id="l-url" placeholder="https://"></div>
       <div class="fg"><label>Type</label>
-        <select id="l-typ">
-          <option value="asset">📁 Asset / Reference</option><option value="draft">🎬 Draft / WIP</option>
+        <select id="l-typ"><option value="asset">📁 Asset / Reference</option><option value="draft">🎬 Draft / WIP</option>
           <option value="delivery">✅ Final Delivery</option><option value="invoice">📄 Invoice</option>
-          <option value="brief">📋 Brief / Script</option><option value="other">🔗 Other</option>
-        </select>
-      </div>
+          <option value="brief">📋 Brief / Script</option><option value="other">🔗 Other</option></select></div>
     </div>
     <div class="mdf">
       <button class="btn btn-g" onclick="closeModal('m-lnk')">Cancel</button>
@@ -290,16 +238,15 @@ select option{background:var(--s2)}
   </div>
 </div>
 
-<!-- ADD EMAIL MODAL -->
+<!-- ADD EMAIL -->
 <div class="mo" id="m-eml">
   <div class="md" style="max-width:660px">
     <div class="mdh"><h3>Add Email to Thread</h3><button class="btn btn-g btn-sm" onclick="closeModal('m-eml')">✕</button></div>
     <div class="mdb">
-      <div class="alert al-i">AI will parse any new details (due dates, deliverables, etc.) and update the job automatically.</div>
+      <div class="alert al-i">AI will parse any new details and update the job automatically.</div>
       <div class="fg"><label>Subject (Optional)</label><input type="text" id="e-sub" placeholder="Re: Project"></div>
       <div class="fg"><label>Paste Email Content</label>
-        <textarea id="e-bod" placeholder="Paste full email..." style="min-height:180px;font-size:12px;"></textarea>
-      </div>
+        <textarea id="e-bod" placeholder="Paste full email..." style="min-height:180px;font-size:12px;"></textarea></div>
     </div>
     <div class="mdf">
       <button class="btn btn-g" onclick="closeModal('m-eml')">Cancel</button>
@@ -311,9 +258,10 @@ select option{background:var(--s2)}
 
 <script>
 // ═══════════════════════════════════════════
-// STATE
+// STATE & STORAGE
 // ═══════════════════════════════════════════
-let S={jobs:[],cfg:{apiKey:'',bizName:'',abn:'',gst:true,rate:'',bsb:'',acct:''},view:'dash',job:null,tab:'ov',timerJob:null,timerStart:null,timerIv:null,filter:'all'};
+let S={jobs:[],cfg:{apiKey:'',model:'claude-haiku-4-5-20251001',bizName:'',abn:'',rate:'',bsb:'',acct:''},
+  view:'dash',job:null,tab:'ov',timerJob:null,timerStart:null,timerIv:null,filter:'all'};
 
 const LS={
   save(){try{localStorage.setItem('ff',JSON.stringify({jobs:S.jobs,cfg:S.cfg}))}catch{}},
@@ -326,9 +274,43 @@ const fmtD=s=>{if(!s)return'—';const d=new Date(s);return isNaN(d)?s:d.toLocal
 const fmtA=n=>{if(n===''||n==null||isNaN(n))return'—';return new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD'}).format(Number(n))};
 const fmtT=s=>{const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sc=Math.floor(s%60);return`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(sc).padStart(2,'0')}`};
 const isOv=j=>{if(!j.due||['paid','invoiced'].includes(j.status))return false;return new Date(j.due)<new Date()};
-const gstCalc=n=>{const v=parseFloat(n)||0;if(!S.cfg.gst)return{ex:v,gst:0,inc:v};return{ex:v,gst:v*.1,inc:v*1.1}};
 const sCfg=s=>({quote:{l:'Quote',cls:'bq',step:0},progress:{l:'In Progress',cls:'bp',step:1},feedback:{l:'Awaiting Feedback',cls:'bf',step:2},invoiced:{l:'Invoiced',cls:'bi',step:3},paid:{l:'Paid ✓',cls:'bd2',step:4}}[s]||{l:'Quote',cls:'bq',step:0});
 const totT=j=>{let t=j.tsec||0;if(S.timerJob===j.id&&S.timerStart)t+=Math.floor((Date.now()-S.timerStart)/1000);return t};
+
+// ═══════════════════════════════════════════
+// EXPORT / IMPORT
+// ═══════════════════════════════════════════
+function exportData(){
+  const payload={version:1,exported:new Date().toISOString(),jobs:S.jobs};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`frameflow-backup-${new Date().toISOString().split('T')[0]}.json`;
+  a.click();URL.revokeObjectURL(a.href);
+}
+
+function importData(e){
+  const file=e.target.files[0];if(!file)return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    try{
+      const d=JSON.parse(ev.target.result);
+      const imp=Array.isArray(d)?d:(d.jobs||[]);
+      if(!imp.length){alert('No jobs found in this file.');return;}
+      const existing=new Set(S.jobs.map(j=>j.id));
+      const newJs=imp.filter(j=>j.id&&!existing.has(j.id));
+      const skipped=imp.length-newJs.length;
+      const msg=skipped>0
+        ?`Import ${newJs.length} job(s)? (${skipped} duplicate(s) will be skipped)`
+        :`Import ${newJs.length} job(s)?`;
+      if(!confirm(msg))return;
+      S.jobs=[...S.jobs,...newJs];
+      LS.save();render();
+      alert(`✓ Imported ${newJs.length} job(s) successfully.`);
+    }catch{alert('Could not read file — make sure it\'s a FrameFlow backup.');}
+  };
+  r.readAsText(file);e.target.value='';
+}
 
 // ═══════════════════════════════════════════
 // NAV
@@ -343,7 +325,7 @@ function nav(v){
 }
 
 // ═══════════════════════════════════════════
-// RENDER MAIN
+// RENDER
 // ═══════════════════════════════════════════
 function render(){
   const el=document.getElementById('mc');
@@ -352,7 +334,6 @@ function render(){
   else if(S.view==='set')el.innerHTML=rSet();
 }
 
-// ─── DASHBOARD ───
 function rDash(){
   const js=S.jobs,oj=S.timerJob?js.find(j=>j.id===S.timerJob):null;
   const active=js.filter(j=>j.status!=='paid').length;
@@ -364,13 +345,14 @@ function rDash(){
   const upcoming=js.filter(j=>j.status!=='paid'&&j.due).sort((a,b)=>new Date(a.due)-new Date(b.due)).slice(0,5);
   return`
     ${oj?`<div class="card" style="margin-bottom:18px;background:rgba(124,109,250,.07);border-color:rgba(124,109,250,.28);">
-      <div style="display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div style="display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap">
         <div><div style="font-size:11px;color:var(--t2);margin-bottom:3px">⏱ TIMER RUNNING</div>
           <div style="font-size:15px;font-weight:600">${esc(oj.title)}</div>
           <div style="font-size:12px;color:var(--t2)">${esc(oj.cname||'')}</div></div>
-        <div style="text-align:center"><div class="td run" id="gt">${fmtT(totT(oj))}</div><div style="font-size:10px;color:var(--t2);margin-top:3px">time tracked</div></div>
+        <div style="text-align:center"><div class="td run" id="gt">${fmtT(totT(oj))}</div>
+          <div style="font-size:10px;color:var(--t2);margin-top:3px">time tracked</div></div>
         <button class="tbtn te" onclick="stopTimer()">■ Stop Timer</button>
-      </div></div>`:``}
+      </div></div>`:''}
     <div class="sg">
       <div class="sc"><div class="sl">Active Jobs</div><div class="sv" style="color:var(--ac)">${active}</div>
         <div class="ss">${overdue>0?`<span style="color:var(--er)">⚠ ${overdue} overdue</span>`:'All on track'}</div></div>
@@ -404,7 +386,6 @@ function rDash(){
     </div>`;
 }
 
-// ─── JOB LIST ───
 function rJobs(){
   let js=[...S.jobs];
   if(S.filter!=='all')js=js.filter(j=>j.status===S.filter);
@@ -432,12 +413,11 @@ function rJobs(){
 }
 function srch(q){const ql=q.toLowerCase();document.querySelectorAll('#jl .jc').forEach(c=>c.style.display=c.textContent.toLowerCase().includes(ql)?'':'none')}
 
-// ─── SETTINGS ───
 function rSet(){const c=S.cfg;return`
   <div style="max-width:580px">
     <div class="card" style="margin-bottom:18px">
-      <div class="sh"><span class="st">🤖 AI / API Key</span></div>
-      <div class="alert al-i" style="margin-bottom:14px">In Claude.ai preview no key needed. For GitHub Pages deployment, enter your Anthropic API key.</div>
+      <div class="sh"><span class="st">🤖 AI Settings</span></div>
+      <div class="alert al-i" style="margin-bottom:14px">Enter your Anthropic API key to enable AI email parsing.</div>
       <div class="fg"><label>Anthropic API Key</label><input type="password" id="s-ak" value="${esc(c.apiKey)}" placeholder="sk-ant-..."></div>
       <div class="fg"><label>Model</label>
         <select id="s-mo">
@@ -453,10 +433,6 @@ function rSet(){const c=S.cfg;return`
         <div class="fg"><label>Business / Trading Name</label><input type="text" id="s-bn" value="${esc(c.bizName)}" placeholder="Your Name / Studio"></div>
         <div class="fg"><label>ABN</label><input type="text" id="s-ab" value="${esc(c.abn)}" placeholder="12 345 678 901"></div>
       </div>
-      <div class="fg"><label>GST Registration</label>
-        <select id="s-gst"><option value="true" ${c.gst?'selected':''}>Yes — I charge GST (10%)</option>
-          <option value="false" ${!c.gst?'selected':''}>No — Not GST registered</option></select>
-      </div>
       <div class="fg"><label>Default Hourly Rate (AUD)</label>
         <input type="number" id="s-rt" value="${esc(c.rate)}" placeholder="150" style="max-width:160px"></div>
     </div>
@@ -467,14 +443,31 @@ function rSet(){const c=S.cfg;return`
         <div class="fg"><label>Account Number</label><input type="text" id="s-ac" value="${esc(c.acct)}" placeholder="12345678"></div>
       </div>
     </div>
+    <div class="card" style="margin-bottom:18px">
+      <div class="sh"><span class="st">💾 Data Backup</span></div>
+      <p style="font-size:13px;color:var(--t2);margin-bottom:14px">Export all your jobs to a JSON file for safekeeping, or import a previous backup.</p>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-s" onclick="exportData()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export Backup
+        </button>
+        <label class="btn btn-s" style="cursor:pointer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Import Backup
+          <input type="file" accept=".json" style="display:none" onchange="importData(event)">
+        </label>
+        <span style="font-size:12px;color:var(--t3)">${S.jobs.length} job(s) stored</span>
+      </div>
+    </div>
     <div style="display:flex;gap:9px;align-items:center">
       <button class="btn btn-p" onclick="saveCfg()">Save Settings</button>
       <button class="btn btn-d btn-sm" onclick="if(confirm('Delete ALL data? This cannot be undone.'))clearAll()">Clear All Data</button>
     </div>
     <div id="sv-ok" style="display:none;color:var(--sd);font-size:12px;margin-top:9px">✓ Saved</div>
   </div>`}
+
 function saveCfg(){
-  S.cfg={apiKey:v('s-ak'),model:v('s-mo'),bizName:v('s-bn'),abn:v('s-ab'),gst:v('s-gst')==='true',rate:v('s-rt'),bsb:v('s-bsb'),acct:v('s-ac')};
+  S.cfg={apiKey:v('s-ak'),model:v('s-mo'),bizName:v('s-bn'),abn:v('s-ab'),rate:v('s-rt'),bsb:v('s-bsb'),acct:v('s-ac')};
   LS.save();const el=document.getElementById('sv-ok');if(el){el.style.display='block';setTimeout(()=>el.style.display='none',2800)}
 }
 function clearAll(){S.jobs=[];LS.save();render()}
@@ -490,7 +483,8 @@ function rDv(){
   const cfg=sCfg(j.status);
   document.getElementById('d-title').textContent=j.title;
   document.getElementById('d-badge').innerHTML=`<span class="badge ${cfg.cls}">${cfg.l}</span>`;
-  const tb=S.timerJob===j.id?`<button class="tbtn te btn-sm" style="padding:4px 10px;font-size:12px" onclick="stopTimer()">■ Stop</button>`
+  const tb=S.timerJob===j.id
+    ?`<button class="tbtn te btn-sm" style="padding:4px 10px;font-size:12px" onclick="stopTimer()">■ Stop</button>`
     :`<button class="btn btn-s btn-sm" onclick="startTimer('${j.id}')">▶ Timer</button>`;
   document.getElementById('d-acts').innerHTML=`${tb}<button class="btn btn-s btn-sm" onclick="showEdit()">Edit</button>
     <button class="btn btn-d btn-sm" onclick="delJob('${j.id}')">Delete</button>`;
@@ -512,7 +506,6 @@ function rTab(){
   else if(S.tab==='fin')el.innerHTML=rFin(j);
 }
 
-// ─── OVERVIEW TAB ───
 function rOv(j){
   const steps=['quote','progress','feedback','invoiced','paid'],lbl=['Quote','In Progress','Feedback','Invoiced','Paid'],cs=steps.indexOf(j.status);
   return`
@@ -520,8 +513,7 @@ function rOv(j){
       <div class="st" style="margin-bottom:13px">Progress — click to update</div>
       <div class="tl">${steps.map((s,i)=>`
         <div class="tls ${i<cs?'done':i===cs?'act':''}" onclick="setStatus('${s}')">
-          <div class="tld">${i<cs?'✓':i+1}</div>
-          <div class="tll">${lbl[i]}</div>
+          <div class="tld">${i<cs?'✓':i+1}</div><div class="tll">${lbl[i]}</div>
         </div>`).join('')}</div>
       <div class="pb"><div class="pf" style="width:${(cs/(steps.length-1))*100}%"></div></div>
     </div>
@@ -548,7 +540,6 @@ function rOv(j){
       <div style="background:var(--s2);border:1px solid var(--bd);border-radius:var(--rsm);padding:13px;font-size:13px;line-height:1.7;white-space:pre-wrap">${esc(j.desc)}</div></div>`:''}`;
 }
 
-// ─── EMAILS TAB ───
 function rEmails(j){return`
   <div style="display:flex;justify-content:flex-end;margin-bottom:14px">
     <button class="btn btn-p btn-sm" onclick="openModal('m-eml')">+ Add Email</button>
@@ -568,7 +559,6 @@ function rEmails(j){return`
     </div>`).join('')}`;
 }
 
-// ─── TIME TAB ───
 function rTime(j){
   const ss=j.tses||[],tot=totT(j),rate=parseFloat(S.cfg.rate)||0,earn=rate*(tot/3600);
   return`
@@ -583,8 +573,7 @@ function rTime(j){
       </div>`:''}
       <div>${S.timerJob===j.id
         ?`<button class="tbtn te" onclick="stopTimer()">■ Stop Timer</button>`
-        :`<button class="tbtn ts" onclick="startTimer('${j.id}')">▶ Start Timer</button>`}
-      </div>
+        :`<button class="tbtn ts" onclick="startTimer('${j.id}')">▶ Start Timer</button>`}</div>
     </div>
     <div class="sh"><span class="st">Session History</span></div>
     ${ss.length===0?`<div style="color:var(--t2);font-size:13px">No sessions yet. Hit Start Timer to begin tracking.</div>`:''}
@@ -596,7 +585,6 @@ function rTime(j){
       </div>`).join('')}`;
 }
 
-// ─── FILES TAB ───
 function rFiles(j){
   const em={asset:'📁',draft:'🎬',delivery:'✅',invoice:'📄',brief:'📋',other:'🔗'};
   return`
@@ -613,20 +601,14 @@ function rFiles(j){
       </div>`).join('')}`;
 }
 
-// ─── FINANCIAL TAB ───
-function rFin(j){const g=gstCalc(j.amount);return`
+function rFin(j){return`
   <div style="max-width:460px">
     <div class="card" style="margin-bottom:18px">
       <div class="st" style="margin-bottom:14px">Quote / Invoice</div>
-      <div class="fg"><label>Quote Amount (AUD excl. GST)</label>
-        <input type="number" id="f-amt" value="${esc(j.amount||'')}" placeholder="0.00" oninput="liveGst(this.value)">
+      <div class="fg"><label>Quote Amount (AUD)</label>
+        <input type="number" id="f-amt" value="${esc(j.amount||'')}" placeholder="0.00">
       </div>
-      ${S.cfg.gst?`<div class="gc" id="gstb">
-        <div class="gr"><span>Subtotal (excl. GST)</span><span>${fmtA(g.ex)}</span></div>
-        <div class="gr"><span>GST (10%)</span><span>${fmtA(g.gst)}</span></div>
-        <div class="gr tot"><span>Total (incl. GST)</span><span>${fmtA(g.inc)}</span></div>
-      </div>`:''}
-      <div class="fr" style="margin-top:14px">
+      <div class="fr" style="margin-top:4px">
         <div class="fg"><label>Invoice Number</label><input type="text" id="f-inv" value="${esc(j.invno||'')}" placeholder="INV-001"></div>
         <div class="fg"><label>Invoice Date</label><input type="date" id="f-idat" value="${esc(j.invdt||'')}"></div>
       </div>
@@ -641,7 +623,7 @@ function rFin(j){const g=gstCalc(j.amount);return`
       <button class="btn btn-p" onclick="saveFin()" style="margin-top:4px">Save Financials</button>
     </div>
     ${S.cfg.bizName?`<div class="card">
-      <div class="st" style="margin-bottom:10px">Your Business Details</div>
+      <div class="st" style="margin-bottom:10px">Your Details</div>
       <div style="font-size:13px;line-height:1.9;color:var(--t2)">
         <strong style="color:var(--t1)">${esc(S.cfg.bizName)}</strong><br>
         ${S.cfg.abn?`ABN: ${esc(S.cfg.abn)}<br>`:''}
@@ -649,15 +631,12 @@ function rFin(j){const g=gstCalc(j.amount);return`
       </div></div>`:''}
   </div>`;}
 
-function liveGst(n){const g=gstCalc(n),el=document.getElementById('gstb');
-  if(el)el.innerHTML=`<div class="gr"><span>Subtotal (excl. GST)</span><span>${fmtA(g.ex)}</span></div>
-    <div class="gr"><span>GST (10%)</span><span>${fmtA(g.gst)}</span></div>
-    <div class="gr tot"><span>Total (incl. GST)</span><span>${fmtA(g.inc)}</span></div>`}
-
-async function saveFin(){const j=S.job;if(!j)return;
+async function saveFin(){
+  const j=S.job;if(!j)return;
   j.amount=v('f-amt');j.invno=v('f-inv');j.invdt=v('f-idat');j.trm=v('f-trm');j.paidDate=v('f-pdat');
   if(j.paidDate&&j.status!=='paid')j.status='paid';
-  LS.save();rDv();}
+  LS.save();rDv();
+}
 
 // ═══════════════════════════════════════════
 // TIMER
@@ -673,19 +652,19 @@ function startTimer(id){
   },1000);
   rDv();render();
 }
-async function stopTimer(){
+function stopTimer(){
   if(!S.timerJob||!S.timerStart)return;
   const j=S.jobs.find(j=>j.id===S.timerJob);
   if(j){const dur=Math.floor((Date.now()-S.timerStart)/1000);
     j.tsec=(j.tsec||0)+dur;if(!j.tses)j.tses=[];
-    j.tses.push({id:uid(),start:new Date(S.timerStart).toISOString(),end:new Date().toISOString(),dur,nt:''});
+    j.tses.push({id:uid(),start:new Date(S.timerStart).toISOString(),end:new Date().toISOString(),dur,nt:''})
     LS.save();}
   clearInterval(S.timerIv);S.timerIv=null;S.timerJob=null;S.timerStart=null;
   if(S.job)rDv();render();
 }
 
 // ═══════════════════════════════════════════
-// AI PARSING
+// AI
 // ═══════════════════════════════════════════
 const SYS=`You are an assistant for an Australian freelance animator/motion graphics/video editor.
 Extract info from client emails. Return ONLY a raw JSON object. Do NOT wrap in code blocks or backticks. No explanation, no markdown, just the JSON object starting with { and ending with }:
@@ -693,17 +672,11 @@ Extract info from client emails. Return ONLY a raw JSON object. Do NOT wrap in c
 "dueDate":"YYYY-MM-DD or null","description":string,
 "deliverables":[{"fmt":string,"res":string,"dur":string,"qty":number,"ft":string,"nt":string}],
 "quoteAmount":number_or_null}
-For deliverables: fmt = orientation+ratio e.g. "Landscape 16:9","Portrait 9:16","Square 1:1"
-Phone: Australian format. quoteAmount: AUD excl GST. Use null for missing fields.`;
+fmt = orientation+ratio e.g. "Landscape 16:9","Portrait 9:16","Square 1:1". Phone: Australian format. quoteAmount: AUD. Use null for missing fields.`;
 
 async function claude(txt,sys){
   if(!S.cfg.apiKey)throw new Error('No API key found — go to Settings and save your Anthropic API key first.');
-  const hdrs={
-    'Content-Type':'application/json',
-    'anthropic-version':'2023-06-01',
-    'anthropic-dangerous-direct-browser-access':'true',
-    'x-api-key':S.cfg.apiKey
-  };
+  const hdrs={'Content-Type':'application/json','anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true','x-api-key':S.cfg.apiKey};
   const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:hdrs,
     body:JSON.stringify({model:S.cfg.model||'claude-haiku-4-5-20251001',max_tokens:1000,system:sys,messages:[{role:'user',content:txt}]})});
   const d=await r.json();
@@ -745,7 +718,6 @@ function newManual(){
   closeModal('m-new');const j=mkJob({},'');S.jobs.push(j);LS.save();openDv(j.id);showEdit();render();
 }
 
-// ─── ADD EMAIL TO JOB ───
 async function addEmlParse(){
   const j=S.job;if(!j)return;
   const body=document.getElementById('e-bod')?.value?.trim(),sub=document.getElementById('e-sub')?.value?.trim();
@@ -754,7 +726,11 @@ async function addEmlParse(){
   j.emls.push({id:uid(),sub:sub||'(Email)',from:j.ceml||'',date:'',body,at:new Date().toISOString()});
   try{
     const raw=await claude(`Follow-up email for existing animation job. Extract any NEW info:\n\n${body}`,SYS);
-    let p={};try{p=JSON.parse(raw)}catch{}
+    let p={};
+    try{
+      const clean=raw.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'').trim();
+      p=JSON.parse(clean);
+    }catch(e){console.warn('FrameFlow parse fail — raw response:',raw);p={}}
     if(p.dueDate&&!j.due)j.due=p.dueDate;
     if(p.quoteAmount&&!j.amount)j.amount=p.quoteAmount;
     if(p.clientPhone&&!j.cphn)j.cphn=p.clientPhone;
@@ -762,6 +738,7 @@ async function addEmlParse(){
   }catch{}
   LS.save();closeModal('m-eml');document.getElementById('e-bod').value='';document.getElementById('e-sub').value='';rTab();
 }
+
 async function addEmlRaw(){
   const j=S.job;if(!j)return;
   const body=document.getElementById('e-bod')?.value?.trim(),sub=document.getElementById('e-sub')?.value?.trim();
@@ -822,35 +799,20 @@ function rmLnk(i){const j=S.job;if(!j||!j.lnks)return;j.lnks.splice(i,1);LS.save
 function rmEml(i){const j=S.job;if(!j||!j.emls)return;j.emls.splice(i,1);LS.save();rTab();}
 
 // ═══════════════════════════════════════════
-// MODAL HELPERS
+// HELPERS & INIT
 // ═══════════════════════════════════════════
 function openModal(id){document.getElementById(id).classList.add('open')}
 function closeModal(id){document.getElementById(id).classList.remove('open')}
 function v(id){return document.getElementById(id)?.value||''}
 
-// ═══════════════════════════════════════════
-// AUTOMATIONS (background checks)
-// ═══════════════════════════════════════════
-function autoGenInvNo(){
-  // Auto-generate invoice number if blank when status changes to 'invoiced'
-  const j=S.job;if(!j||j.status!=='invoiced'||j.invno)return;
-  const count=S.jobs.filter(j=>j.invno).length+1;
-  j.invno=`INV-${new Date().getFullYear()}-${String(count).padStart(3,'0')}`;
-  j.invdt=new Date().toISOString().split('T')[0];
-}
-
-// ═══════════════════════════════════════════
-// INIT
-// ═══════════════════════════════════════════
 function init(){
   LS.load();
-  // Demo data on first run
   if(S.jobs.length===0){
     S.jobs=[{
       id:uid(),title:'Product Launch Animation',cname:'Sarah Mitchell',cco:'Vibe Marketing Co.',
       ceml:'sarah@vibemarketing.com.au',cphn:'0412 345 678',
       due:new Date(Date.now()+7*86400000).toISOString().split('T')[0],
-      desc:'Animated product launch for new skincare range. Premium & aspirational feel. 3 versions required.\n\nColour palette: blush pink, gold, white.\nFont: Canela (client to supply).',
+      desc:'Animated product launch for new skincare range. Premium & aspirational feel. 3 versions required.',
       dels:[
         {id:uid(),fmt:'Landscape 16:9',res:'1920×1080',dur:'30s',qty:1,ft:'MP4 H.264',nt:'YouTube pre-roll'},
         {id:uid(),fmt:'Portrait 9:16',res:'1080×1920',dur:'15s',qty:2,ft:'MP4 H.264',nt:'Instagram Reels & TikTok'},
@@ -860,7 +822,7 @@ function init(){
         {id:uid(),start:new Date(Date.now()-86400000).toISOString(),end:new Date(Date.now()-79200000).toISOString(),dur:7200,nt:'Animation pass'},
       ],
       emls:[{id:uid(),sub:'Animation Project Brief',from:'sarah@vibemarketing.com.au',date:'Mon 2 Jun',
-        body:`Hi there,\n\nLove your portfolio! We'd love to work with you on an animation for our new skincare launch.\n\nWe need:\n- 1x 30s landscape (YouTube pre-roll)\n- 2x 15s portrait (Instagram + TikTok)\n\nBudget is around $3k incl. GST. Can you have it done by next week?\n\nLet me know if you're available.\n\nCheers,\nSarah`,
+        body:`Hi there,\n\nLove your portfolio! We'd love to work with you on an animation for our new skincare launch.\n\nWe need:\n- 1x 30s landscape (YouTube pre-roll)\n- 2x 15s portrait (Instagram + TikTok)\n\nBudget is around $2,800. Can you have it done by next week?\n\nCheers,\nSarah`,
         at:new Date().toISOString()}],
       lnks:[{id:uid(),ttl:'Brand Assets Drive',url:'https://drive.google.com',typ:'asset',at:new Date().toISOString()}],
       invno:'',invdt:'',trm:'30',paidDate:'',createdAt:new Date().toISOString()
@@ -868,7 +830,7 @@ function init(){
       id:uid(),title:'Corporate Explainer — FinTech App',cname:'James Chen',cco:'FinTech Solutions Pty Ltd',
       ceml:'j.chen@fintechsolutions.com.au',cphn:'0400 111 222',
       due:new Date(Date.now()-2*86400000).toISOString().split('T')[0],
-      desc:'60s explainer animation for their new budgeting app. Clean, corporate, trustworthy. Voiceover to be supplied.',
+      desc:'60s explainer animation for their new budgeting app. Clean, corporate, trustworthy.',
       dels:[{id:uid(),fmt:'Landscape 16:9',res:'1920×1080',dur:'60s',qty:1,ft:'MP4 H.264',nt:'With & without captions'}],
       amount:4500,status:'invoiced',tsec:28800,tses:[],
       emls:[],lnks:[],invno:'INV-2025-001',invdt:new Date().toISOString().split('T')[0],
@@ -878,10 +840,7 @@ function init(){
   }
   nav('dash');
   document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeDv();
-      ['m-new','m-edit','m-del','m-lnk','m-eml'].forEach(closeModal);
-    }
+    if(e.key==='Escape'){closeDv();['m-new','m-edit','m-del','m-lnk','m-eml'].forEach(closeModal)}
   });
   document.querySelectorAll('.mo').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open')}));
 }
