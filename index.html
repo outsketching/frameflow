@@ -571,18 +571,70 @@ function rTime(j){
         <div class="sl">Billable @ ${fmtA(rate)}/hr</div>
         <div style="font-size:24px;font-weight:700;color:var(--sd)">${fmtA(earn)}</div>
       </div>`:''}
-      <div>${S.timerJob===j.id
-        ?`<button class="tbtn te" onclick="stopTimer()">■ Stop Timer</button>`
-        :`<button class="tbtn ts" onclick="startTimer('${j.id}')">▶ Start Timer</button>`}</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        ${S.timerJob===j.id
+          ?`<button class="tbtn te" onclick="stopTimer()">■ Stop Timer</button>`
+          :`<button class="tbtn ts" onclick="startTimer('${j.id}')">▶ Start Timer</button>`}
+        <button class="btn btn-s btn-sm" onclick="showManualTime()">+ Log Hours Manually</button>
+      </div>
     </div>
+    <div id="mt-form" style="display:none;margin-bottom:18px"></div>
     <div class="sh"><span class="st">Session History</span></div>
-    ${ss.length===0?`<div style="color:var(--t2);font-size:13px">No sessions yet. Hit Start Timer to begin tracking.</div>`:''}
+    ${ss.length===0?`<div style="color:var(--t2);font-size:13px">No sessions yet. Hit Start Timer or log hours manually.</div>`:''}
     ${[...ss].reverse().map(s=>`
-      <div class="li"><div style="font-size:18px">⏱</div>
-        <div class="lii"><div class="lt">${new Date(s.start).toLocaleDateString('en-AU')} · ${new Date(s.start).toLocaleTimeString('en-AU',{hour:'2-digit',minute:'2-digit'})}</div>
+      <div class="li"><div style="font-size:18px">${s.manual?'✍️':'⏱'}</div>
+        <div class="lii"><div class="lt">${new Date(s.start).toLocaleDateString('en-AU')}${s.manual?' · Manual entry':''}</div>
           <div class="lu">${esc(s.nt||'No note')}</div></div>
         <div class="td" style="font-size:13px">${fmtT(s.dur)}</div>
+        <button class="btn btn-g btn-sm" style="color:var(--er)" onclick="rmSess('${s.id}')">✕</button>
       </div>`).join('')}`;
+}
+
+function showManualTime(){
+  const el=document.getElementById('mt-form');if(!el)return;
+  const open=el.style.display!=='none';
+  if(open){el.style.display='none';el.innerHTML='';return;}
+  el.style.display='block';
+  el.innerHTML=`
+    <div class="card">
+      <div class="fr">
+        <div class="fg"><label>Date</label><input type="date" id="mt-date" value="${new Date().toISOString().split('T')[0]}"></div>
+        <div class="fg"><label>Hours &amp; Minutes</label>
+          <div style="display:flex;gap:8px">
+            <input type="number" id="mt-h" placeholder="Hrs" min="0" style="width:50%">
+            <input type="number" id="mt-m" placeholder="Mins" min="0" max="59" style="width:50%">
+          </div>
+        </div>
+      </div>
+      <div class="fg"><label>Note (Optional)</label><input type="text" id="mt-nt" placeholder="e.g. Client revisions, storyboard pass"></div>
+      <div style="display:flex;gap:9px;justify-content:flex-end">
+        <button class="btn btn-g btn-sm" onclick="showManualTime()">Cancel</button>
+        <button class="btn btn-p btn-sm" onclick="saveManualTime()">Add Entry</button>
+      </div>
+    </div>`;
+}
+
+function saveManualTime(){
+  const j=S.job;if(!j)return;
+  const h=parseFloat(v('mt-h'))||0,m=parseFloat(v('mt-m'))||0,dur=Math.round(h*3600+m*60);
+  if(dur<=0){alert('Enter hours or minutes greater than 0.');return;}
+  const date=v('mt-date')||new Date().toISOString().split('T')[0];
+  if(!j.tses)j.tses=[];
+  j.tsec=(j.tsec||0)+dur;
+  j.tses.push({id:uid(),start:new Date(date+'T12:00:00').toISOString(),end:null,dur,nt:v('mt-nt'),manual:true});
+  LS.save();
+  document.getElementById('mt-form').style.display='none';
+  document.getElementById('mt-form').innerHTML='';
+  rTab();
+}
+
+function rmSess(id){
+  const j=S.job;if(!j||!j.tses)return;
+  const s=j.tses.find(s=>s.id===id);if(!s)return;
+  if(!confirm('Remove this time entry?'))return;
+  j.tsec=Math.max(0,(j.tsec||0)-s.dur);
+  j.tses=j.tses.filter(s=>s.id!==id);
+  LS.save();rTab();
 }
 
 function rFiles(j){
